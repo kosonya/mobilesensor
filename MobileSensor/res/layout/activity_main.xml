@@ -8,9 +8,190 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-    <TextView
+    <LinearLayout
+        android:id="@+id/top_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="fill|top"
+        android:orientation="vertical" >
+        
+            <LinearLayout
+                android:id="@+id/server_uri_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="fill_horizontal" >
+
+                    <TextView
+                        android:id="@+id/server_uri_TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/server_uri_label" />
+
+                    <EditText
+                        android:id="@+id/server_uri_ET"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="textUri"
+                        android:text="@string/default_server_uri" >
+
+                        <requestFocus />
+                    </EditText>
+
+                    <Button
+                        android:id="@+id/server_uri_apply_B"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/apply_string" />
+                
+    		</LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/create_location_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="fill_horizontal" >
+
+                <TextView
+                    android:id="@+id/create_location_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/create_location_label" />
+
+                <EditText
+                    android:id="@+id/create_location_ET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:text="@string/create_location_name" />
+
+                <Button
+                    android:id="@+id/create_location_B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/create_and_apply_location" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/select_location_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/select_location_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_location_string" />
+
+                <Spinner
+                    android:id="@+id/select_location_S"
+                    android:layout_width="128dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.33"
+                    android:prompt="@string/existing_locations" />
+
+                <Button
+                    android:id="@+id/select_location_accept_B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/accept" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/suggested_location_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/suggested_location_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/suggested_locatoin_default" />
+
+                <Button
+                    android:id="@+id/suggested_location_accept_B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/accept" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/control_buttons_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <ToggleButton
+                    android:id="@+id/toggle_listening_TB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ToggleButton"
+                    android:textOff="Start\nlistening"
+                    android:textOn="Stop\nlistening" />
+
+                <ToggleButton
+                    android:id="@+id/toggle_sending_TB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ToggleButton"
+                    android:textOff="Start\nsending"
+                    android:textOn="Stop\nsending" />
+
+                <ToggleButton
+                    android:id="@+id/toggle_recording_TB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ToggleButton"
+                    android:textOff="Strart\nrecording"
+                    android:textOn="Stop\nrecording" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/current_location_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/current_location" />
+
+            <TextView
+                android:id="@+id/packets_sent_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/packets_sent_default" />
+
+            <TextView
+                android:id="@+id/packets_pending_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/packets_pending_default" />
+
+            <TextView
+                android:id="@+id/wifi_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/here_be_wifi" />
+
+            <TextView
+                android:id="@+id/gps_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/here_be_gps" />
+
+            <TextView
+                android:id="@+id/server_response_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/servetr_response" />
+        
+    </LinearLayout>
+
 
 </RelativeLayout>

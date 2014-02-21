@@ -4,5 +4,22 @@
     <string name="app_name">Mobile Sensor</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="default_server_uri">http://maxwell.cmu.sv.local:8080/</string>
+    <string name="server_uri_label">Server\nhost:port:</string>
+    <string name="apply_string">Apply</string>
+    <string name="create_location_label">Create\nlocation:</string>
+    <string name="create_location_name">Location name</string>
+    <string name="create_and_apply_location">Apply</string>
+    <string name="select_location_string">Select\nlocation</string>
+    <string name="select_location">Existing locations</string>
+    <string name="packets_sent_default">Packets sent: 0</string>
+    <string name="suggested_locatoin_default">Suggested location: None</string>
+    <string name="accept">Accept</string>
+    <string name="packets_pending_default">Packets pending: 0</string>
+    <string name="servetr_response">Here be server response</string>
+    <string name="existing_locations">Existing locations</string>
+    <string name="current_location">Current location:</string>
+    <string name="here_be_gps">Here be GPS data</string>
+    <string name="here_be_wifi">Here be WiFi data</string>
 
 </resources>
